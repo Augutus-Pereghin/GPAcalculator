@@ -4,18 +4,20 @@
 
 def result2GP(letterGrade):
   GP = 0.0
-  if letterGrade[0] == 'A':
-    GP += 4.0
-  elif letterGrade[0] == 'B':
-    GP += 3.0
-  elif letterGrade[0] == 'C':
-    GP += 2.0
-  elif letterGrade[0] == 'D':
-    GP += 1.0
-  if letterGrade[1] == "+":
-    GP += 0.33
-  elif letterGrade[1] == "-":
-    GP -= 0.33
+  if letterGrade == 'A':
+    GP = 4.0
+  elif letterGrade == 'A-':
+    GP = 3.67
+  elif letterGrade == 'B+':
+    GP = 3.33
+  elif letterGrade == 'B':
+    GP = 3.0
+  elif letterGrade == 'C+':
+    GP = 2.67
+  elif letterGrade == 'C':
+    GP = 2.0
+  elif letterGrade == 'D':
+    GP = 1.0
   return GP
 
 i = 0
@@ -25,7 +27,7 @@ totalGP = 0
 totalWeight = 0
 
 while i != 3:
-  scores[i] = float(result2GP(input(f"Enter your course {i + 1} letter grade: ") + " "))
+  scores[i] = float(result2GP(input(f"Enter your course {i + 1} letter grade: ")))
   weights[i] = float(input(f"Enter your course {i + 1} credit: "))
   print(f"Grade point for course {i+1} is: {scores[i]}")
   totalGP += scores[i]*weights[i]
