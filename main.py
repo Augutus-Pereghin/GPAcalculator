@@ -12,8 +12,10 @@ def result2GP(letterGrade):
     GP = 3.33
   elif letterGrade == 'B':
     GP = 3.0
-  elif letterGrade == 'C+':
+  elif letterGrade == 'B-':
     GP = 2.67
+  elif letterGrade == 'C+':
+    GP = 2.33
   elif letterGrade == 'C':
     GP = 2.0
   elif letterGrade == 'D':
