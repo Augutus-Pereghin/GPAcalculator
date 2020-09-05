@@ -5,13 +5,13 @@
 def result2GP(letterGrade):
   GP = 0
   if letterGrade[0] == 'A':
-    GP += 4
+    GP += 4.0
   elif letterGrade[0] == 'B':
-    GP += 3
+    GP += 3.0
   elif letterGrade[0] == 'C':
-    GP += 2
+    GP += 2.0
   elif letterGrade[0] == 'D':
-    GP += 1
+    GP += 1.0
   if letterGrade[1] == '+':
     GP += 0.33
   elif letterGrade[1] == '-':
