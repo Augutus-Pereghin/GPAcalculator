@@ -1,8 +1,9 @@
 # Author: Augustus Perseghin agp5191@psu.edu
+# Date: 9/11/2020
 # Hwk1
 # This program will calculate a student's GPA from 3 classes
 
-def result2GP(letterGrade):
+def getGradePoint(letterGrade):
   GP = 0.0
   if letterGrade == 'A':
     GP = 4.0
@@ -22,24 +23,22 @@ def result2GP(letterGrade):
     GP = 1.0
   return GP
 
-i = 0
-scores = [0, 0, 0]
-weights = [0, 0, 0]
-totalGP = 0
-totalWeight = 0
+def run():
+  i = 0
+  scores = [0, 0, 0]
+  weights = [0, 0, 0]
+  totalGP = 0
+  totalWeight = 0
 
-while i != 3:
-  scores[i] = float(result2GP(input(f"Enter your course {i + 1} letter grade: ")))
-  weights[i] = float(input(f"Enter your course {i + 1} credit: "))
-  print(f"Grade point for course {i+1} is: {scores[i]}")
-  totalGP += scores[i]*weights[i]
-  totalWeight += weights[i]
-  i += 1
+  while i != 3:
+    scores[i] = float(getGradePoint(input(f"Enter your course {i + 1} letter grade: ")))
+    weights[i] = float(input(f"Enter your course {i + 1} credit: "))
+    print(f"Grade point for course {i+1} is: {scores[i]}")
+    totalGP += scores[i]*weights[i]
+    totalWeight += weights[i]
+    i += 1
 
-print(f"Your GPA is: {totalGP/totalWeight}")
+  print(f"Your GPA is: {totalGP/totalWeight}")
 
-
-
-
-
-
+if __name__ == "__main__":
+  run()
